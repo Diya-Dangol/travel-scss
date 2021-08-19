@@ -1,0 +1,16 @@
+.carousel{
+    .carousel-inner{
+        img{
+            height: calc(100vh - 80px);
+            width: 100%;
+        }
+        .carousel-caption{
+            // position: absolute;
+            .main-heading{
+                margin: auto;
+                // margin-bottom: 130px;
+                text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+            }
+        }
+    }
+}

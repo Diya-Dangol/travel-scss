@@ -1,0 +1,144 @@
+//MIXINS
+@mixin transition($range:all,$time:0.3s,$ease:ease-in-out,$delay:null) {
+  transition: $time $range $ease $delay;
+}
+@mixin transdelay($time:1s){
+  transition-delay: $time;
+}
+@mixin translator($x:0,$y:0) {
+  transform: translate($x,$y);
+}
+@mixin transform($transforms) {
+  transform: $transforms;
+}
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+@mixin placeholder {
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+@mixin font($f:null,$s:null,$st:null,$w:null) {
+  font-family: $f;
+  font-size: $s;
+  font-style: $st;
+  font-weight: $w;
+}
+@mixin text($t:null,$d:null,$a:null) {
+  text-transform: $t;
+  text-align: $a;
+  text-decoration: $d;
+}
+@mixin position($p:null,$t:null,$r:null,$b:null,$l:null) {
+  position: $p;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+@mixin col($columns,$guttervalue) {
+  @media #{$desktop,$tabletlandscape}{
+    float: left;
+    display: block;
+    margin-right: $guttervalue;
+    $totalgutter: ($columns - 1) * $guttervalue;
+    $gutter: $totalgutter / $columns;
+    width: calc(100% / #{$columns} - #{$gutter});
+    &:nth-child(#{$columns}n + #{$columns}) {
+      margin-right: 0;
+      &:after {
+        content: '';
+        width: 100%;
+        clear: both;
+        display: block;
+      }
+    }
+  }
+  @media #{$tablet} {
+    width: 100%;
+  }
+}
+// *** Usage ***
+// .col-two {
+//   @include col (2,20px);
+// }
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+@mixin keyframes($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  animation: #{$str};
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+
+// *** Usage ***
+// @include keyframes(slide-down) {
+//   0% { opacity: 1; }
+//   90% { opacity: 0; }
+// }
+//
+// .element {
+//   width: 100px;
+//   height: 100px;
+//   background: black;
+//   @include animation('slide-down 5s 3');
+// }
+//
+
+@mixin slidingbutton($b:null,$c:null,$hb:null,$hc:null){
+  position: relative;
+  color:$c;
+  overflow: hidden;
+  &:before,&:after{
+    @include transition();
+    @include position($p:absolute,$t:0);
+    content: '';
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  &:before{
+    left: -100%;
+    background-color: $hb;
+  }
+  &:after{
+    left: 0;
+    background-color: $b;
+  }
+  &:hover{
+    color: $hc;
+    &:before{
+      left: 0;
+    }
+    &:after{
+      left: 100%;
+    }
+  }
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}

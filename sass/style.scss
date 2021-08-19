@@ -1,0 +1,40 @@
+/*!
+Theme Name: Jana Dristi
+Theme URI: http://underscores.me/
+Author: Catch Square
+Author URI: http://catchsquare.com/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: jana dristi
+Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-ready, full-width-template, post-formats, custom-post-type, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+@import "imports/_variables";
+@import "imports/_mixins";
+
+@import "common/_global";
+
+@import "common/header";
+@import "common/footer";
+@import "common/_responsive";
+
+@import "component/carousel";
+@import "component/priceRange";
+
+/*--------------------------------------------------------------
+# home SCSS
+--------------------------------------------------------------*/
+@import "pages/home";
+
+
+
+
+
+
+
+
+
+
+

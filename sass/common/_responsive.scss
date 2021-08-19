@@ -1,0 +1,112 @@
+/*$laptop:"screen and (max-width: 1200px)";
+$desktop:"screen and (max-width: 1024px)";
+$fablet:"screen and (max-width: 991px)";
+$tablet:"screen and (max-width: 768px)";
+$mobile:"screen and (max-width: 600px)";
+$midmobile:"screen and (max-width: 500px)";
+$smallmobile:"screen and (max-width: 400px)";
+$minimobile:"screen and (max-width: 300px)";*/
+
+/* Body and main banner text*/
+@media #{$mobile}{
+    // body{
+    //     @include font($s: 16px);
+    // }
+    p{
+        @include font($s: 12px);
+    }
+    h2{
+        font-size: 26px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .main-heading{
+        h1{
+            font-size: 34px;
+        }
+        label{
+            font-size: 14px;
+            margin-bottom: 60px;
+        }
+    }
+    
+    .form-group{
+        .form-control{
+            font-size: 14px;
+            label{
+                font-size: 14px;
+            }
+        }
+    }
+}
+/* Header */
+@media #{$fablet}{
+    #header{
+        // @include font($s: 12px);
+        .nav-item{
+            display: block;
+            position: relative;
+            text-align: center;
+            &:after{
+                display: block;
+                content: "";
+                background-color: $text;
+                height: 0.5px;
+                width: 100%;
+                opacity: 1;
+                // margin: 0 auto;
+            }
+        }
+        .nav-item.active{
+            a{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+        .nav-item.dropdown{
+            // @include transition;
+            .dropdown-menu{
+                padding: 0;
+                position:relative;
+                top:0;
+                background: $white;
+                display: none;
+                // @include transition;
+                .dropdown-item{
+                    color: $text;
+                    text-align: center;
+                    &:after{
+                        display: block;
+                        content: "";
+                        height: 0.5px;
+                        width: 100%;
+                        background-color: $text;
+                        position: relative;
+                        margin: 0 auto;
+                    }
+                    &:hover{
+                        color: $maincolor;
+                        &:after{
+                            display:none;
+                            opacity: 0 !important;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .dropdown-menu{
+                    display:none;
+                }
+            }
+        }
+    }
+}   
+
+// popular destination
+@media #{$fablet}{
+    // .thumbnail{
+    //     height: 200px;
+    // }
+}

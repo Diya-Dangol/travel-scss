@@ -1,0 +1,40 @@
+// MEDIA QUERIES
+
+$laptop:"screen and (max-width: 1200px)";
+$desktop:"screen and (max-width: 1024px)";
+$fablet:"screen and (max-width: 991px)";
+$tablet:"screen and (max-width: 768px)";
+$mobile:"screen and (max-width: 600px)";
+$midmobile:"screen and (max-width: 500px)";
+$smallmobile:"screen and (max-width: 400px)";
+$minimobile:"screen and (max-width: 300px)";
+
+
+// Global Colors
+$white: #ffffff;
+$black: #000000;
+$grey:#767676;
+$darkgrey:#333333;
+$blue:#1ca0f4;
+$lightblue:#4ec4eb;
+$yellow:#efc220;
+$maincolor:rgb(255, 108, 48);
+$secondary:#080707;
+$red:#ff6f6f;
+$green:#11b583;
+$lightgreen:#c3f3e5;
+$text:#565656;
+$bg:#dcf3fb;
+
+//Typography
+$base-font:  'Ubuntu';
+$serif-font: null; //Add fonts if needed
+$font-size-base: 14px;
+$thinweight:300;
+$normalweight: 400;
+$semibold:600;
+$boldweight: 700;
+$blackweight:800;
+$headings: h1 h2 h3 h4 h5 h6;
+$font-size-upper: $font-size-base * 3;
+$font-size-dec: 6px;

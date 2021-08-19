@@ -1,0 +1,270 @@
+// .btn {
+//   font-size: 14px;
+//   font-weight: $boldweight;
+//   letter-spacing: 0.7px;
+//   text-transform: uppercase;
+//   color: $white;
+//   padding: 9px 25px;
+//   background-image: linear-gradient($maincolor, #085c7e);
+//   border-radius: 20px;
+//   @include transition;
+//   &.btn-red {
+//     background-image: linear-gradient($red, #f65a5a);
+//   }
+//   &.btn-lined {
+//     background: $white;
+//     color: $maincolor;
+//     border: 2px solid $maincolor
+//   }
+
+//   &:hover {
+//     color: $white;
+//     background-image: linear-gradient(#7c7c7c, #646464);
+//   }
+//   &.btn-lined:hover {
+//     border: 2px solid $maincolor;
+//     background-image: linear-gradient($maincolor, #085c7e);
+//   }
+//   &.shade {
+//     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.04);
+//   }
+// }
+
+.black{
+  background: #e1e1e1;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+}
+
+.clear{
+  clear: both;
+}
+
+
+form{
+  padding: 20px;
+  .form-group{
+    display: inline-block;
+    place-content: center;
+    @include font($s: 10px);
+  }
+}
+
+html, body{
+  width: 100%;
+}
+
+body{
+  font-family: "montserrat", sans-serif;
+  font-size: 20px;
+  color: $black;
+  background: rgb(241, 241, 241);
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2, h3{
+  font-weight: 500;
+  text-transform:capitalize;
+}
+h1{
+  font-size: 64px;
+}
+h2{
+  font-size: 32px;
+  font-weight: 550;
+}
+
+p, label{
+  font-family: "open-sans", sans-serif;
+  font-size: 16px;
+}
+
+a{
+  color: $white;
+  &:hover{
+    color: $white;
+  }
+}
+
+text{
+  color: rgb(98, 98, 98);
+  font-size: 12px;
+  font-family: "open-sans", sans-serif;
+  font-weight: 500;
+}
+
+img{
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.navbar-brand#logo{
+  &:hover{
+    color: $white;
+  }
+  #M{
+    background-color: $maincolor;
+    @include font($f: 'Script MT',$w: $boldweight, $s: 30px);
+    padding: 4px;
+    text-transform: capitalize;
+  }
+
+  sup{
+    font-size: 12px;
+    color: $maincolor;
+    margin-bottom: 10px;
+  }
+}
+
+.bg-grey, .bg{
+  margin:0;
+  padding: 100px 0;
+  position: relative;
+  width: 100%;
+}
+
+.bg-grey{
+  background:rgb(230, 230, 230);
+}
+.subTitle{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  &:after{
+    display: block;
+    content: "";
+    height: 3px;
+    width: 6%;
+    background-color: rgb(255, 108, 48);
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+  }
+}
+.sub-container{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.black-overlay{
+  background: rgba(0,0,0, 0.8);
+  z-index: 2;
+}
+
+.read-more{
+  text-decoration: underline;
+  &:hover{
+    color: $maincolor;
+  }
+}
+
+.checked{
+  color: rgb(255, 223, 80);
+}
+
+.btn-primary{
+  background-color: rgb(241, 105, 48);
+  border: none;
+  i{
+    color: rgb(255, 255, 255) !important;
+  }
+  &:hover{
+    background-color:rgb(218, 94, 40) !important;
+  }
+}
+
+
+.main-heading {
+  h1{
+    &:after{
+      display: block;
+      content: "";
+      height: 3px;
+      width: 6%;
+      background-color: rgb(255, 108, 48);
+      position: relative;
+      bottom: -8px;
+      margin: 0 auto;
+    }
+  }
+  label{
+    bottom: 50px;
+  }
+}
+.section-heading{
+  // margin-top: 150px;
+  text-align: center;
+  // margin-bottom: 50px;
+  h2{
+    &:after{
+      display: block;
+      content: "";
+      height: 3px;
+      width: 6%;
+      background-color: rgb(255, 108, 48);
+      position: relative;
+      bottom: -8px;
+      margin: 0 auto;
+    }
+  }
+}
+.bannerHeading{
+  h2{
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    font-weight: 600;
+  }
+}
+
+.row{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron{
+  background-size: cover;
+  background-position: bottom;
+  color:white;
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.card-body {
+  i{
+    color:rgb(241, 105, 48);
+    font-size: 15px;
+  }
+}
+// binocular and text
+.thumbnail-title{
+  i{
+    position: absolute;
+    left: 45%;
+    top:0;
+    border-radius: 30px;
+    background: $maincolor;
+    opacity: 0;
+    padding: 10px;
+  }
+  h5{
+    bottom:0;
+    padding: 1.25rem;
+    position: absolute;
+    text-shadow: 2px 2px 2px rgba(0,0,0, 0.6);
+  }
+}
+.padding{
+  padding-right:10%;
+  padding-left: 10%;
+}
+
+.left-quote, .right-quote{
+  color: rgb(141, 141, 141) !important;
+}
+.round-image{
+  border-radius: 50%;
+}
+.rounded-circle{
+  padding: 10px 30px 0px 30px;
+}

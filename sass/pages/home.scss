@@ -1,0 +1,139 @@
+
+// popular destination 
+
+.thumbnail{
+    cursor: pointer;
+    @include transition;
+    &:hover{
+        background: linear-gradient(rgba(241, 119, 48, 0.9), rgba(0, 0, 0, 1));
+        @include transition;
+        .thumbnail-title{
+            i{
+                animation-direction: normal;
+                animation-duration: 1s;
+                animation-name: binocular;
+                opacity:1;
+                transform: translateY(400%);
+            }
+        }
+    }
+    img{
+        height: 400px;
+    }
+    
+    
+    span{
+        font-size: 14px;
+    }
+}
+
+
+@keyframes binocular{
+    0%{
+        transform: translateY(0%);
+        opacity: 0.3;
+        // @include transition;
+    }
+    100%{
+        transform: translateY(400%);
+        opacity: 1;
+        // @include transition;
+    }
+}
+
+
+// popular packages
+.card{
+    border: none;
+    @include transition;
+    &:hover{
+        .thumbnail-title{
+            i{
+                animation-direction: normal;
+                animation-duration: 1s;
+                animation-name: binocular-popular-package;
+                opacity:1;
+                transform: translateY(200%);
+            }
+        }
+    }
+    .figure{
+        position: relative;
+        .card-img-overlay{
+            top: auto;
+            right: auto;
+            .card-title{
+                margin-top: 90%;
+                text-shadow: 2px 2px 2px rgba(0,0,0, 0.6);
+            }
+        }
+    }
+    img{
+        cursor: pointer;
+        height: 200px;
+    }
+}
+@keyframes binocular-popular-package{
+    0%{
+        transform: translateY(0%);
+        opacity: 0.3;
+    }
+    100%{
+        transform: translateY(200%);
+        opacity: 1;
+    }
+}
+
+// we accept
+.cardBanner{ 
+    i{
+        font-size: 60px;    
+    }
+}
+
+#about-us{
+    .card{
+        img{
+            height: auto;
+        }
+    }
+}
+
+.sectionService{ 
+    i{
+        font-size: 50px !important;
+    }   
+}
+
+#partner{
+    .card{
+        // padding: 15px;
+        .round-image{
+            height: 120px;
+            margin: 20px 20px 0 20px;
+        }
+        .card-title{
+            margin-bottom:0;
+        }
+    }
+}
+
+// #bannerSubscribe{
+//     // margin-top: 50px;
+// }
+
+#testimonial{
+    .card{
+        .round-image{
+            // border-radius: 5%;
+            height: 250px;
+            margin: 20px 20px 0 20px;
+        }
+        .card-text{
+            .left-quote, .right-quote{
+                opacity: 0.3;
+                font-size: 20px;
+            }
+        }
+    }
+}

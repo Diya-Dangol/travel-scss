@@ -1,0 +1,78 @@
+section.range-slider {
+    float: left;
+    position: relative;
+    /* text-align: center; */
+    width: 100%;
+}
+section.range-slider input[type="range"] {
+    background: rgba(0,0,0,0.05);
+    border: none;
+    border-radius: 14px;
+    height: 20px;
+    left: 0;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: red;
+}
+section.range-slider input[type="range"]::-webkit-slider-thumb {
+    border: none;
+    border-radius: 14px;
+    height: 20px;
+    outline: 0;
+    pointer-events: all;
+    position: relative;
+    width: 20px;
+    -webkit-appearance: none;
+    z-index: 1;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dad8da), color-stop(100%, #413f41));
+    /* android <= 2.2 */
+    background-image: -webkit-linear-gradient(top, #dad8da 0, #413f41 100%);
+    /* older mobile safari and android > 2.2 */
+    background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+    /* W3C */
+}
+section.range-slider input[type="range"]::-moz-range-thumb {
+    border: none;
+    border-radius: 14px;
+    height: 20px;
+    pointer-events: all;
+    position: relative;
+    width: 20px;
+    -moz-appearance: none;
+    z-index: 10;
+    background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+    /* W3C */
+}
+section.range-slider input[type="range"]::-ms-thumb {
+    border-radius: 14px;
+    border: 0;
+    height: 20px;
+    pointer-events: all;
+    position: relative;
+    -ms-appearance: none;
+    width: 20px;
+    z-index: 10;
+    background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+    /* W3C */
+}
+section.range-slider input[type=range]::-moz-range-track {
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+    position: relative;
+    z-index: -1;
+}
+section.range-slider input[type=range]:last-of-type::-moz-range-track {
+    background: none transparent;
+    border: 0;
+    -moz-appearance: none;
+}
+section.range-slider input[type=range]::-moz-focus-outer {
+    border: 0;
+}
